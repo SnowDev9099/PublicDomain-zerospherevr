@@ -1,180 +1,128 @@
-<html><head><base href="https://zerospherevr" />
-<title>Zero Sphere - Explore Space in Virtual Reality</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  .stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-  }
-  @keyframes twinkle {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
-  }
-  .star {
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    animation: twinkle 3s infinite;
-  }
-  header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    text-align: center;
-  }
-  h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #4CAF50;
-    text-shadow: 0 0 10px #4CAF50;
-  }
-  nav {
-    margin-top: 20px;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #4CAF50;
-  }
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  .hero {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .hero h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
-  .cta-button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  .cta-button:hover {
-    background-color: #45a049;
-  }
-  .features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .feature {
-    width: 30%;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .feature img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zero Sphere - A VR game by Snow Studios">
+    <title>Zero Sphere | Snow Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        h1, h2 {
+            color: #000;
+        }
+        .features, .contact {
+            margin: 20px 0;
+        }
+        .feature-item {
+            margin-bottom: 10px;
+        }
+        .screenshots img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact button {
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background: #444;
+        }
+    </style>
 </head>
 <body>
-  <div class="stars"></div>
-  <header>
-    <h1>Zero Gravity VR</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#platforms">Platforms</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  
-  <main>
-    <section class="hero">
-      <h2>Experience the Thrill of Space Exploration</h2>
-      <p>Immerse yourself in a breathtaking zero gravity adventure. Available now on Meta Quest 2 and 3, coming soon to Steam!</p>
-      <a href="404 page does not exist" class="cta-button">Get It Now</a>
-    </section>
+    <header>
+        <div class="container">
+            <h1>Zero Sphere</h1>
+            <p>Experience the ultimate zero-gravity VR game from Snow Studios</p>
+        </div>
+    </header>
     
-    <section id="features" class="features">
-      <div class="feature">
-        <img src="spacewalk.jpg" alt="Astronaut on a spacewalk" width="200" height="200">
-        <h3>Realistic Space Walks</h3>
-        <p>Experience the sensation of floating in space with our advanced physics engine.</p>
-      </div>
-      <div class="feature">
-        <img src="spaceship.jpg" alt="Futuristic spaceship interior" width="200" height="200">
-        <h3>Explore Spaceships</h3>
-        <p>Navigate through detailed, interactive spacecraft interiors and exteriors.</p>
-      </div>
-      <div class="feature">
-        <img src="missions.jpg" alt="Space mission control center" width="200" height="200">
-        <h3>Engaging Missions</h3>
-        <p>Complete challenging tasks and missions in the vastness of space.</p>
-      </div>
-    </section>
+    <div class="container">
+        <section class="game-description">
+            <h2>About Zero Sphere</h2>
+            <p>Zero Sphere is an immersive VR game set in a zero-gravity environment. Developed by Snow Studios, this game offers a unique and thrilling experience with intuitive locomotion mechanics and exciting team-based gameplay.</p>
+        </section>
+        
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature-item">
+                <h3>Zero-Gravity Gameplay</h3>
+                <p>Navigate and interact in a zero-gravity space with precise control.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Dynamic Team Play</h3>
+                <p>Join one of two teams and compete for victory in fast-paced matches.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Customizable Cosmetics</h3>
+                <p>Personalize your character with a range of cosmetic options.</p>
+            </div>
+        </section>
+        
+        <section class="screenshots">
+            <h2>Screenshots</h2>
+            <img src="screenshot1.jpg" alt="Zero Sphere Screenshot 1">
+            <img src="screenshot2.jpg" alt="Zero Sphere Screenshot 2">
+            <img src="screenshot3.jpg" alt="Zero Sphere Screenshot 3">
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form action="send-message.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
     
-    <section id="platforms">
-      <h2>Available Platforms</h2>
-      <p>Zero Gravity VR is currently available on Meta Quest 2 and Meta Quest 3. We're excited to announce that we'll be launching on Steam VR soon, bringing the zero gravity experience to even more virtual reality enthusiasts!</p>
-      <div class="platform-logos">
-        <img src="quest-logo.png" alt="Meta Quest logo" width="150" height="50">
-        <img src="steam-logo.png" alt="Steam logo" width="150" height="50">
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2023 Zero Gravity VR. All rights reserved.</p>
-    <a href="https://twitter.com/zerogravityvr">Twitter</a> |
-    <a href="https://facebook.com/zerogravityvr">Facebook</a> |
-    <a href="https://instagram.com/zerogravityvr">Instagram</a>
-  </footer>
-
-  <script>
-    function createStars() {
-      const starsContainer = document.querySelector('.stars');
-      const starCount = 200;
-      
-      for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.width = `${Math.random() * 3}px`;
-        star.style.height = star.style.width;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 3}s`;
-        starsContainer.appendChild(star);
-      }
-    }
-
-    createStars();
-  </script>
-</body></html>
+    <footer>
+        <p>&copy; 2024 Snow Studios. All rights reserved.</p>
+    </footer>
+</body>
+</html>
